@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
 <!-- saved from url=(0072)http://192.168.1.7/mod/quiz/review.php?attempt=10926&cmid=2119&showall=1 -->
-<html dir="ltr" lang="en" xml:lang="en" class="yui3-js-enabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Bài trắc nghiệm tổng hợp: Attempt review</title>
+<html dir="ltr" lang="vi" xml:lang="vi" class="yui3-js-enabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Bài trắc nghiệm tổng hợp: Xem lại bài làm</title>
     <link rel="shortcut icon" href="http://192.168.1.7/theme/image.php/academi/theme/1746608998/favicon">
     
-<meta name="keywords" content="moodle, Bài trắc nghiệm tổng hợp: Attempt review">
-<link rel="stylesheet" type="text/css" href="./Bài trắc nghiệm tổng hợp_ Attempt review_files/combo"><script charset="utf-8" id="yui_3_17_2_1_1747274741815_8" src="./Bài trắc nghiệm tổng hợp_ Attempt review_files/combo(1)" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1747274741815_19" src="./Bài trắc nghiệm tổng hợp_ Attempt review_files/javascript.php" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1747274741815_1123" src="./Bài trắc nghiệm tổng hợp_ Attempt review_files/javascript(1).php" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1747274741815_1124" src="./Bài trắc nghiệm tổng hợp_ Attempt review_files/javascript(2).php" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1747274741815_1125" src="./Bài trắc nghiệm tổng hợp_ Attempt review_files/combo(2)" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="./Bài trắc nghiệm tổng hợp_ Attempt review_files/styles.php">
+<meta name="keywords" content="moodle, Bài trắc nghiệm tổng hợp, xem lại bài làm">
+<link rel="stylesheet" type="text/css" href="./assets/combo.css"><script charset="utf-8" id="yui_3_17_2_1_1747274741815_8" src="./assets/combo-1.js" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1747274741815_19" src="./assets/javascript-core.js" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1747274741815_1123" src="./assets/javascript-1.js" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1747274741815_1124" src="./assets/javascript-2.js" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1747274741815_1125" src="./assets/combo-2.js" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="./assets/styles.css">
 <script>
 //<![CDATA[
 var M = {}; M.yui = {};
@@ -20,14 +20,14 @@ M.yui.loader = {modules: {}};
 </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core/first" src="./Bài trắc nghiệm tổng hợp_ Attempt review_files/requirejs.php"></script><script type="text/x-mathjax-config">
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core/first" src="./assets/requirejs.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     config: ["Accessible.js", "Safe.js"],
     errorSettings: { message: ["!"] },
     skipStartupTypeset: true,
     messageStyle: "none"
 });
-</script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="./Bài trắc nghiệm tổng hợp_ Attempt review_files/javascript(3).php"></script>
+</script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="./assets/jquery-3.5.1.min.js"></script>
 <style>
 body.codex-quiz-redesign {
     background:
@@ -240,6 +240,76 @@ body.codex-quiz-redesign [role="main"] {
     background: linear-gradient(180deg, #fff7f7 0%, #fff0f0 100%);
 }
 
+.que .answer > div.is-selected {
+    border-color: #5d8797;
+    box-shadow: 0 0 0 3px rgba(31, 92, 110, 0.08);
+}
+
+.que .answer > div.is-correct-answer {
+    border-color: #57b992;
+    background: linear-gradient(180deg, #f0fff7 0%, #e4f8ef 100%);
+}
+
+.que .answer > div.is-user-wrong {
+    border-color: #d37c7c;
+    background: linear-gradient(180deg, #fff7f7 0%, #fff0f0 100%);
+}
+
+.que .answer-feedback {
+    margin-top: 14px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: #f3f8fb;
+    color: #29404f;
+    font-size: 0.94rem;
+    line-height: 1.5;
+}
+
+.que.is-correct {
+    border-color: rgba(37, 130, 88, 0.32);
+}
+
+.que.is-wrong {
+    border-color: rgba(179, 73, 73, 0.28);
+}
+
+.que.is-unanswered {
+    border-color: rgba(161, 96, 0, 0.24);
+}
+
+.codex-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.codex-button {
+    border: 0;
+    border-radius: 999px;
+    padding: 11px 18px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.codex-button-primary {
+    background: #ffffff;
+    color: #12344d;
+}
+
+.codex-button-secondary {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.codex-toolbar-note {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.92rem;
+}
+
 .que img {
     max-width: 100%;
     height: auto;
@@ -313,6 +383,21 @@ body.codex-quiz-redesign [role="main"] {
     color: #9b2c2c;
 }
 
+.codex-question-nav a.is-correct {
+    background: #e7f8ef;
+    color: #12704d;
+}
+
+.codex-question-nav a.is-wrong {
+    background: #ffe8e8;
+    color: #9b2c2c;
+}
+
+.codex-question-nav a.is-unanswered {
+    background: #fff4df;
+    color: #a16000;
+}
+
 .codex-footer-note {
     margin-top: 14px;
     padding-top: 12px;
@@ -370,10 +455,10 @@ body.codex-quiz-redesign [role="main"] {
 
     <div>
     <a class="sr-only sr-only-focusable" href="http://192.168.1.7/mod/quiz/review.php?attempt=10926&amp;cmid=2119&amp;showall=1#maincontent">Skip to main content</a>
-</div><script src="./Bài trắc nghiệm tổng hợp_ Attempt review_files/javascript(4).php"></script>
-<script src="./Bài trắc nghiệm tổng hợp_ Attempt review_files/javascript(5).php"></script>
-<script src="./Bài trắc nghiệm tổng hợp_ Attempt review_files/combo(3)"></script><script src="./Bài trắc nghiệm tổng hợp_ Attempt review_files/jquery-3.5.1.min.js.tải xuống"></script>
-<script src="./Bài trắc nghiệm tổng hợp_ Attempt review_files/javascript(6).php"></script>
+</div><script src="./assets/javascript-4.js"></script>
+<script src="./assets/javascript-5.js"></script>
+<script src="./assets/combo-3.js"></script><script src="./assets/jquery-3.5.1.min.js"></script>
+<script src="./assets/javascript-6.js"></script>
 <script>
 //<![CDATA[
 document.body.className += ' jsenabled';
@@ -1708,7 +1793,7 @@ var require = {
 
 //]]>
 </script>
-<script src="./Bài trắc nghiệm tổng hợp_ Attempt review_files/javascript(7).php"></script>
+<script src="./assets/javascript-7.js"></script>
 <script>
 //<![CDATA[
 M.util.js_pending("core/first");
@@ -1878,8 +1963,8 @@ M.yui.add_module({"core_question_engine":{"name":"core_question_engine","fullpat
 
 //]]>
 </script>
-<script src="./Bài trắc nghiệm tổng hợp_ Attempt review_files/javascript(8).php"></script>
-<script src="./Bài trắc nghiệm tổng hợp_ Attempt review_files/javascript(9).php"></script>
+<script src="./assets/javascript-8.js"></script>
+<script src="./assets/javascript-9.js"></script>
 <script>
 //<![CDATA[
 M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","cancel":"Cancel","changesmadereallygoaway":"You have made changes. Are you sure you want to navigate away and lose your changes?","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL","collapseall":"Collapse all","expandall":"Expand all"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} links to this file","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"},"question":{"flagged":"Flagged"},"quiz":{"functiondisabledbysecuremode":"That functionality is currently disabled","startattempt":"Start attempt","timesup":"Time is up!"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":": "}};
@@ -1899,6 +1984,157 @@ M.util.help_popups.setup(Y);
 </script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+    function normalizeAssetPaths() {
+        var assetSelectors = 'img, script[src], link[href]';
+        Array.prototype.forEach.call(document.querySelectorAll(assetSelectors), function (node) {
+            var attr = node.tagName === 'LINK' ? 'href' : 'src';
+            var current = node.getAttribute(attr);
+            var match = current && current.match(/Bài trắc nghiệm tổng hợp_ Attempt review_files\/([^?#"]+)/);
+            if (match) {
+                node.setAttribute(attr, './assets/' + match[1]);
+            }
+        });
+    }
+
+    function vietnamizeStaticLabels() {
+        document.documentElement.lang = 'vi';
+        document.documentElement.setAttribute('xml:lang', 'vi');
+        document.title = 'Bài trắc nghiệm tổng hợp: Xem lại bài làm';
+
+        Array.prototype.forEach.call(document.querySelectorAll('h1, h2, .page-header-headings'), function (node) {
+            if (node.textContent.indexOf('Attempt review') !== -1) {
+                node.textContent = node.textContent.replace('Attempt review', 'Xem lại bài làm');
+            }
+        });
+
+        var summaryMap = {
+            'Started on': 'Bắt đầu lúc',
+            'State': 'Trạng thái',
+            'Completed on': 'Hoàn thành lúc',
+            'Time taken': 'Thời gian làm bài',
+            'Marks': 'Số câu đúng',
+            'Grade': 'Điểm'
+        };
+
+        Array.prototype.forEach.call(document.querySelectorAll('.quizreviewsummary th'), function (cell) {
+            var text = cell.textContent.trim();
+            if (summaryMap[text]) {
+                cell.textContent = summaryMap[text];
+            }
+        });
+
+        Array.prototype.forEach.call(document.querySelectorAll('.que .no'), function (node) {
+            node.childNodes[0].textContent = 'Câu ';
+        });
+
+        Array.prototype.forEach.call(document.querySelectorAll('.questionflagimage'), function (img) {
+            img.title = 'Đánh dấu câu hỏi này để xem lại sau';
+            img.alt = 'Chưa đánh dấu';
+        });
+
+        Array.prototype.forEach.call(document.querySelectorAll('.questionflagtext'), function (node) {
+            node.textContent = 'Đánh dấu câu hỏi';
+            node.title = 'Đánh dấu câu hỏi này để xem lại sau';
+        });
+
+        Array.prototype.forEach.call(document.querySelectorAll('.accesshide'), function (node) {
+            if (node.textContent.trim() === 'Question text') {
+                node.textContent = 'Nội dung câu hỏi';
+            }
+        });
+
+        Array.prototype.forEach.call(document.querySelectorAll('.qnbutton .accesshide'), function (node) {
+            if (node.textContent.indexOf('Question') !== -1) {
+                node.textContent = node.textContent.replace('Question', 'Câu').replace('This page', 'Trang này');
+            }
+        });
+
+        Array.prototype.forEach.call(document.querySelectorAll('[title="Complete"]'), function (node) {
+            node.setAttribute('title', 'Đã làm');
+        });
+
+        Array.prototype.forEach.call(document.querySelectorAll('.state'), function (node) {
+            if (node.textContent.trim() === 'Complete') {
+                node.textContent = 'Đã làm';
+            }
+        });
+
+        Array.prototype.forEach.call(document.querySelectorAll('.grade'), function (node) {
+            node.textContent = node.textContent.replace(/^Mark\s+/i, 'Điểm ').replace(/\s+out of\s+/i, ' / ');
+        });
+
+        Array.prototype.forEach.call(document.querySelectorAll('a'), function (link) {
+            var text = link.textContent.trim();
+            if (text === 'Show one page at a time') {
+                link.textContent = 'Hiển thị từng trang';
+            } else if (text === 'Finish review') {
+                link.textContent = 'Kết thúc xem lại';
+            } else if (text === 'Grades') {
+                link.textContent = 'Điểm số';
+            }
+        });
+    }
+
+    normalizeAssetPaths();
+    vietnamizeStaticLabels();
+
+    var answerKeyText = 'C1-D, C2-B, C3-B, C4-A, C5-B, C6-C, C7-D, C8-B, C9-B, C10-B, C11-D, C12-B\n' +
+        'C13-A, C14-A, C15-B, C16-B, C17-A, C18-A, C19-B, C20-A, C21-A, C22-B, C23-A, C24-D\n' +
+        'C25-B, C26-D, C27-B, C28-A, C29-A, C30-C, C31-A, C32-C, C33-A, C34-C, C35-D, C36-C\n' +
+        'C37-B, C38-C, C39-A, C40-B, C41-B, C42-B, C43-D, C44-D, C45-C, C46-A, C47-D, C48-B\n' +
+        'C49-A, C50-D, C51-A, C52-A, C53-D, C54-D, C55-C, C56-D, C57-D, C58-C, C59-B, C60-D\n' +
+        'C61-A, C62-B, C63-B, C64-D, C65-A, C66-D, C67-C, C68-A, C69-A, C70-C, C71-A, C72-A\n' +
+        'C73-A, C74-B, C75-B, C76-A, C77-B, C78-C, C79-A, C80-A, C81-B, C82-D, C83-B, C84-A\n' +
+        'C85-A, C86-B, C87-D, C88-D, C89-D, C90-A, C91-B, C92-B, C93-B, C94-A, C95-B, C96-D\n' +
+        'C97-A, C98-B, C99-D, C100-A, C101-B, C102-B, C103-A, C104-D, C105-B, C106-A, C107-B, C108-A\n' +
+        'C109-D, C110-D, C111-B, C112-C, C113-A, C114-D, C115-A, C116-B, C117-A, C118-B, C119-B, C120-C\n' +
+        'C121-C, C122-B';
+
+    function parseAnswerKey(rawText) {
+        var key = {};
+        rawText.split(',').forEach(function (item) {
+            var cleaned = item.trim();
+            var match = cleaned.match(/^C(\d+)-([A-D])$/i);
+            if (match) {
+                key[match[1]] = match[2].toUpperCase();
+            }
+        });
+        return key;
+    }
+
+    function getOptionLetter(optionNode) {
+        var marker = optionNode.querySelector('.answernumber');
+        if (!marker) {
+            return '';
+        }
+
+        return marker.textContent.replace('.', '').trim().charAt(0).toUpperCase();
+    }
+
+    function clearQuestionState(question) {
+        question.classList.remove('is-correct', 'is-wrong', 'is-unanswered');
+        Array.prototype.forEach.call(question.querySelectorAll('.answer > div'), function (option) {
+            option.classList.remove('is-selected', 'is-correct-answer', 'is-user-wrong', 'correct', 'incorrect');
+        });
+    }
+
+    function buildResultText(state, answerLetter, selectedLetter) {
+        if (!answerLetter) {
+            return 'Khong tim thay dap an trong file answer.txt.';
+        }
+
+        if (state === 'correct') {
+            return 'Ban da chon dung. Dap an dung la ' + answerLetter + '.';
+        }
+
+        if (state === 'wrong') {
+            return 'Ban chon ' + selectedLetter + '. Dap an dung la ' + answerLetter + '.';
+        }
+
+        return 'Ban chua chon dap an. Dap an dung la ' + answerLetter + '.';
+    }
+
+    var answerKey = parseAnswerKey(answerKeyText);
     document.body.classList.add('codex-quiz-redesign');
 
     var roleMain = document.querySelector('[role="main"]');
@@ -1942,25 +2178,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     var subtitle = document.createElement('p');
-    subtitle.textContent = 'Ban xem lai toan bo bai lam theo dang the thong ke o dau trang va the cau hoi doc lap, de doc nhanh va de doi chieu dap an.';
+    subtitle.textContent = 'Trang nay da duoc chuyen sang che do luyen tap. Chon dap an, bam cham diem, va doi chieu voi file answer.txt.';
 
     var summaryGrid = document.createElement('div');
     summaryGrid.className = 'codex-summary-grid';
+    summaryGrid.innerHTML =
+        '<div class="codex-stat"><span class="codex-stat-label">Tong cau</span><span class="codex-stat-value" data-stat="total">0</span></div>' +
+        '<div class="codex-stat"><span class="codex-stat-label">Da chon</span><span class="codex-stat-value" data-stat="answered">0</span></div>' +
+        '<div class="codex-stat"><span class="codex-stat-label">Dung</span><span class="codex-stat-value" data-stat="correct">0</span></div>' +
+        '<div class="codex-stat"><span class="codex-stat-label">Diem 10</span><span class="codex-stat-value" data-stat="score">0.00</span></div>';
 
-    stats.forEach(function (item) {
-        var stat = document.createElement('div');
-        stat.className = 'codex-stat';
-        stat.innerHTML =
-            '<span class="codex-stat-label"></span>' +
-            '<span class="codex-stat-value"></span>';
-        stat.querySelector('.codex-stat-label').textContent = item.label;
-        stat.querySelector('.codex-stat-value').textContent = item.value;
-        summaryGrid.appendChild(stat);
-    });
+    var toolbar = document.createElement('div');
+    toolbar.className = 'codex-toolbar';
+    toolbar.innerHTML =
+        '<button type="button" class="codex-button codex-button-primary" data-action="grade">Cham diem</button>' +
+        '<button type="button" class="codex-button codex-button-secondary" data-action="reset">Lam lai</button>' +
+        '<span class="codex-toolbar-note">Dap an duoc nap tu danh sach trong answer.txt.</span>';
 
     hero.appendChild(title);
     hero.appendChild(subtitle);
     hero.appendChild(summaryGrid);
+    hero.appendChild(toolbar);
 
     var panel = document.createElement('section');
     panel.className = 'codex-panel';
@@ -1971,47 +2209,179 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var questions = questionForm.querySelectorAll('.que');
     var totalQuestions = questions.length;
-    var fullCount = 0;
+    var statTotal = summaryGrid.querySelector('[data-stat="total"]');
+    var statAnswered = summaryGrid.querySelector('[data-stat="answered"]');
+    var statCorrect = summaryGrid.querySelector('[data-stat="correct"]');
+    var statScore = summaryGrid.querySelector('[data-stat="score"]');
+
+    function updateSummary(answeredCount, correctCount) {
+        var score = totalQuestions ? ((correctCount / totalQuestions) * 10) : 0;
+        statTotal.textContent = String(totalQuestions);
+        statAnswered.textContent = String(answeredCount);
+        statCorrect.textContent = String(correctCount);
+        statScore.textContent = score.toFixed(2);
+        note.textContent = 'Da chon ' + answeredCount + '/' + totalQuestions + ' cau. Dung ' + correctCount + ' cau. Diem quy doi: ' + score.toFixed(2) + '/10.';
+    }
+
+    function gradeQuiz() {
+        var answeredCount = 0;
+        var correctCount = 0;
+
+        Array.prototype.forEach.call(questions, function (question) {
+            var questionNumber = question.dataset.questionNumber;
+            var answerLetter = answerKey[questionNumber] || '';
+            var selectedInput = question.querySelector('input[type="radio"]:checked');
+            var selectedLetter = '';
+            var state = 'unanswered';
+
+            clearQuestionState(question);
+
+            if (selectedInput) {
+                answeredCount += 1;
+                selectedLetter = String.fromCharCode(65 + parseInt(selectedInput.value, 10));
+                selectedInput.closest('div').classList.add('is-selected');
+                if (selectedLetter === answerLetter) {
+                    state = 'correct';
+                    correctCount += 1;
+                    selectedInput.closest('div').classList.add('is-correct-answer', 'correct');
+                    question.classList.add('is-correct');
+                } else {
+                    state = 'wrong';
+                    selectedInput.closest('div').classList.add('is-user-wrong', 'incorrect');
+                    question.classList.add('is-wrong');
+                }
+            } else {
+                question.classList.add('is-unanswered');
+            }
+
+            Array.prototype.forEach.call(question.querySelectorAll('.answer > div'), function (option) {
+                if (getOptionLetter(option) === answerLetter) {
+                    option.classList.add('is-correct-answer', 'correct');
+                }
+            });
+
+            var gradeNode = question.querySelector('.grade');
+            if (gradeNode) {
+                if (state === 'correct') {
+                    gradeNode.textContent = '1 / 1';
+                } else if (state === 'wrong') {
+                    gradeNode.textContent = '0 / 1';
+                } else {
+                    gradeNode.textContent = '- / 1';
+                }
+            }
+
+            var stateNode = question.querySelector('.state');
+            if (stateNode) {
+                if (state === 'correct') {
+                    stateNode.textContent = 'Dung';
+                } else if (state === 'wrong') {
+                    stateNode.textContent = 'Sai';
+                } else {
+                    stateNode.textContent = 'Chua chon';
+                }
+            }
+
+            var feedback = question.querySelector('.answer-feedback');
+            if (!feedback) {
+                feedback = document.createElement('div');
+                feedback.className = 'answer-feedback';
+                question.querySelector('.formulation').appendChild(feedback);
+            }
+            feedback.textContent = buildResultText(state, answerLetter, selectedLetter);
+
+            var link = nav.querySelector('a[href="#' + question.id + '"]');
+            if (link) {
+                link.classList.remove('is-full', 'is-partial', 'is-zero', 'is-correct', 'is-wrong', 'is-unanswered');
+                if (state === 'correct') {
+                    link.classList.add('is-correct');
+                } else if (state === 'wrong') {
+                    link.classList.add('is-wrong');
+                } else {
+                    link.classList.add('is-unanswered');
+                }
+            }
+        });
+
+        updateSummary(answeredCount, correctCount);
+    }
+
+    function resetQuiz() {
+        Array.prototype.forEach.call(questions, function (question) {
+            clearQuestionState(question);
+            question.classList.remove('is-correct', 'is-wrong', 'is-unanswered');
+
+            Array.prototype.forEach.call(question.querySelectorAll('input[type="radio"]'), function (input) {
+                input.checked = false;
+            });
+
+            var gradeNode = question.querySelector('.grade');
+            if (gradeNode) {
+                gradeNode.textContent = '- / 1';
+            }
+
+            var stateNode = question.querySelector('.state');
+            if (stateNode) {
+                stateNode.textContent = 'Chua chon';
+            }
+
+            var feedback = question.querySelector('.answer-feedback');
+            if (feedback) {
+                feedback.textContent = 'Chua cham diem.';
+            }
+
+            var link = nav.querySelector('a[href="#' + question.id + '"]');
+            if (link) {
+                link.classList.remove('is-full', 'is-partial', 'is-zero', 'is-correct', 'is-wrong', 'is-unanswered');
+            }
+        });
+
+        updateSummary(0, 0);
+    }
 
     Array.prototype.forEach.call(questions, function (question, index) {
         var qNo = question.querySelector('.qno');
         var gradeNode = question.querySelector('.grade');
-        var scoreClass = '';
+        var stateNode = question.querySelector('.state');
 
         question.dataset.questionNumber = qNo ? qNo.textContent.trim() : String(index + 1);
+        question.classList.remove('is-full', 'is-zero', 'is-partial');
+
+        if (stateNode) {
+            stateNode.textContent = 'Chua chon';
+        }
 
         if (gradeNode) {
-            var gradeText = gradeNode.textContent.replace(/\s+/g, ' ').trim();
-            var match = gradeText.match(/Mark\s+([0-9.]+)\s+out of\s+([0-9.]+)/i);
-            if (match) {
-                var score = parseFloat(match[1]);
-                var total = parseFloat(match[2]);
-                if (!isNaN(score) && !isNaN(total)) {
-                    if (score === total) {
-                        scoreClass = 'is-full';
-                        fullCount += 1;
-                    } else if (score === 0) {
-                        scoreClass = 'is-zero';
-                    } else {
-                        scoreClass = 'is-partial';
-                    }
-                }
-            }
+            gradeNode.textContent = '- / 1';
         }
 
-        if (scoreClass) {
-            question.classList.add(scoreClass);
-        }
+        Array.prototype.forEach.call(question.querySelectorAll('input[type="radio"]'), function (input) {
+            input.disabled = false;
+            input.checked = false;
+            input.addEventListener('change', function () {
+                Array.prototype.forEach.call(question.querySelectorAll('.answer > div'), function (option) {
+                    option.classList.remove('is-selected');
+                });
+                input.closest('div').classList.add('is-selected');
+            });
+        });
+
+        var feedback = document.createElement('div');
+        feedback.className = 'answer-feedback';
+        feedback.textContent = 'Chua cham diem.';
+        question.querySelector('.formulation').appendChild(feedback);
 
         var link = document.createElement('a');
         link.href = '#' + question.id;
-        link.className = scoreClass;
         link.textContent = qNo ? qNo.textContent.trim() : String(index + 1);
         link.title = 'Cau ' + link.textContent;
         nav.appendChild(link);
     });
 
-    note.textContent = 'Tong cong ' + totalQuestions + ' cau, dung tron ven ' + fullCount + ' cau.';
+    toolbar.querySelector('[data-action="grade"]').addEventListener('click', gradeQuiz);
+    toolbar.querySelector('[data-action="reset"]').addEventListener('click', resetQuiz);
+
+    updateSummary(0, 0);
 
     roleMain.insertBefore(shell, summaryTable);
     shell.appendChild(mainColumn);
